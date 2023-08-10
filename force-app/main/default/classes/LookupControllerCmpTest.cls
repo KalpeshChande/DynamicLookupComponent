@@ -12,7 +12,7 @@ public class LookupControllerCmpTest {
          // Id recordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Account').getRecordTypeId();
         Account a = new Account();
         a.Name = 'Test';
-        a.Email__c= 'TestEmail@example.com';
+        //a.Email__c= 'TestEmail@example.com';
        // a.RecordTypeId = recordTypeId;
        // a.CurrencyIsoCode = 'CLP';
        // a.Sales_Org__c = sales_org.Id;
@@ -38,7 +38,7 @@ public class LookupControllerCmpTest {
     @istest
     public static void searchTest(){
         Test.startTest();
-         LookupControllerCmp.searchedLookupList('Account','Name','name!=null','Email__c,phone');
+         LookupControllerCmp.searchedLookupList('Account','Name','name!=null','phone');
          LookupControllerCmp.searchedLookupList('Account','Name','name!=null',null);
         Test.stopTest();
     }
